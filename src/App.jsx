@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import cooljobLogo from "./assets/Cooljob.svg";
 import searchIcon from "./assets/Поиск.svg";
 import locationIcon from "./assets/Локация.svg";
@@ -47,78 +47,78 @@ function App() {
   };
 
   return (
-    <div className="pageWrapper">
-      <div className="heroSection">
-        <div className="heroBgShape" />
+    <div className={styles.pageWrapper}>
+      <div className={styles.heroSection}>
+        <div className={styles.heroBgShape} />
 
-        <header className="header container">
-          <div className="headerLeft">
-            <a href="/" className="logo">
+        <header className={`${styles.header} ${styles.container}`}>
+          <div className={styles.headerLeft}>
+            <a href="/" className={styles.logo}>
               <img src={cooljobLogo} alt="Cooljob" />
             </a>
-            <nav className="nav">
-              <a href="#jobs" className="navLink">
+            <nav className={styles.nav}>
+              <a href="#jobs" className={styles.navLink}>
                 Поиск работы
               </a>
-              <a href="#startups" className="navLink">
+              <a href="#startups" className={styles.navLink}>
                 Поиск стартапов
               </a>
             </nav>
           </div>
 
-          <div className="headerRight">
-            <a href="#register" className="navLink">
+          <div className={styles.headerRight}>
+            <a href="#register" className={styles.navLink}>
               Регистрация
             </a>
-            <button type="button" className="btnLogin">
+            <button type="button" className={styles.btnLogin}>
               Вход
             </button>
           </div>
         </header>
 
-        <main className="heroContent container">
-          <h1 className="heroTitle">
+        <main className={`${styles.heroContent} ${styles.container}`}>
+          <h1 className={styles.heroTitle}>
             Один клик <br />и работа в кармане
           </h1>
 
-          <form className="searchBar" onSubmit={handleSearch}>
-            <div className="searchField">
-              <img src={searchIcon} alt="" className="searchIcon" />
+          <form className={styles.searchBar} onSubmit={handleSearch}>
+            <div className={styles.searchField}>
+              <img src={searchIcon} alt="" className={styles.searchIcon} />
               <input
                 type="text"
                 placeholder="Должность или компания"
-                className="searchInput"
+                className={styles.searchInput}
               />
             </div>
 
-            <div className="searchDivider" />
+            <div className={styles.searchDivider} />
 
-            <div className="searchField">
-              <img src={locationIcon} alt="" className="searchIcon" />
+            <div className={styles.searchField}>
+              <img src={locationIcon} alt="" className={styles.searchIcon} />
               <input
                 type="text"
                 placeholder="Город, Страна"
-                className="searchInput"
+                className={styles.searchInput}
               />
             </div>
 
-            <button type="submit" className="btnSearch">
+            <button type="submit" className={styles.btnSearch}>
               Поиск
             </button>
           </form>
         </main>
       </div>
 
-      <section className="partnersSection">
-        <div className="container partnersInner">
-          <span className="partnersLabel">Помогаем найти работу:</span>
-          <div className="partnersLogos">
+      <section className={styles.partnersSection}>
+        <div className={`${styles.container} ${styles.partnersInner}`}>
+          <span className={styles.partnersLabel}>Помогаем найти работу:</span>
+          <div className={styles.partnersLogos}>
             {partners.map((partner) => (
               <img
                 key={partner.id}
                 src={partner.logo}
                 alt={partner.name}
-                className="partnerLogo"
+                className={styles.partnerLogo}
                 style={{
                   width: `${partner.width}px`,
                   height: `${partner.height}px`,
@@ -129,25 +129,27 @@ function App() {
         </div>
       </section>
 
-      <section className="categoriesSection">
-        <div className="categoriesContainer">
-          <h2 className="categoriesTitle">
+      <section className={styles.categoriesSection}>
+        <div className={styles.container}>
+          <h2 className={styles.categoriesTitle}>
             Работа <br />
             по категориям
           </h2>
 
-          <div className="categoriesGrid">
+          <div className={styles.categoriesGrid}>
             {categories.map((category) => (
               <div
                 key={category.id}
-                className={`categoryCard ${category.isMore ? "categoryCardMore" : ""}`}
+                className={`${styles.categoryCard} ${
+                  category.isMore ? styles.categoryCardMore : ""
+                }`}
               >
                 <img
                   src={category.icon}
                   alt={category.title}
-                  className="categoryIcon"
+                  className={styles.categoryIcon}
                 />
-                <span className="categoryName">{category.title}</span>
+                <span className={styles.categoryName}>{category.title}</span>
               </div>
             ))}
           </div>
