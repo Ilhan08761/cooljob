@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  color: #1e252b;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Верхний голубой блок */
+.heroSection {
+  position: relative;
+  background-color: #d4ecff;
+  min-height: 620px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Декоративная синяя фигура справа */
+.heroBgShape {
+  position: absolute;
+  right: -120px;
+  bottom: -180px;
+  width: 680px;
+  height: 520px;
+  background-color: #96ceff;
+  border-radius: 140px;
+  transform: rotate(-32deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Шапка */
+.header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.logo img {
+  height: 28px;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #2c353d;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.navLink:hover {
+  opacity: 0.7;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.btnLogin {
+  background-color: #ffffff;
+  color: #274159;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s;
+}
+
+.btnLogin:hover {
+  transform: translateY(-1px);
+}
+
+/* Главный экран */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 85px;
+}
+
+.heroTitle {
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #1a2229;
+  margin-bottom: 40px;
+}
+
+/* Поисковая строка */
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  max-width: 780px;
+  height: 76px;
+  box-shadow: 0 18px 35px rgba(39, 65, 89, 0.12);
+}
+
+.searchField {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 14px;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #1e252b;
+}
+
+.searchInput::placeholder {
+  color: #8a949e;
+}
+
+.searchDivider {
+  width: 1px;
+  height: 32px;
+  background-color: #e2e8f0;
+}
+
+.btnSearch {
+  height: 100%;
+  padding: 0 48px;
+  background-color: #274159;
+  color: #ffffff;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnSearch:hover {
+  background-color: #1d3246;
+}
+
+/* Блок партнеров */
+.partnersSection {
+  background-color: #ffffff;
+  padding: 44px 0;
+}
+
+.partnersInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.partnersLabel {
+  font-size: 14px;
+  color: #7a869a;
+}
+
+.partnersLogos {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  flex-wrap: wrap;
+}
+
+.partnerLogo {
+  object-fit: contain;
+  display: block;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.partnerLogo:hover {
+  opacity: 1;
+}
