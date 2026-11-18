@@ -209,12 +209,6 @@
   padding: 90px 0 110px;
 }
 
-.categoriesContainer {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .categoriesTitle {
   font-size: 32px;
   line-height: 1.25;
@@ -225,16 +219,15 @@
 
 .categoriesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 24px;
 }
 
 .categoryCard {
   width: 100%;
-  aspect-ratio: 246 / 190;
-  min-height: 165px;
+  height: 190px;
   background-color: #ffffff;
-  padding: clamp(20px, 2vw, 36px) clamp(18px, 1.6vw, 28px);
+  padding: 36px 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -275,4 +268,217 @@
   font-weight: 500;
   color: #2c353d;
   white-space: pre-line;
+}
+
+/* Секция: Новые вакансии */
+.vacanciesSection {
+  background-color: #e2f1ff;
+  padding: 20px 0 110px;
+}
+
+.vacanciesHeader {
+  margin-bottom: 48px;
+}
+
+.vacanciesTitle {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #1e252b;
+  margin-bottom: 10px;
+}
+
+.vacanciesSubtitle {
+  font-size: 14px;
+  color: #7a869a;
+}
+
+.vacanciesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.vacancyCard {
+  background-color: #ffffff;
+  min-height: 290px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 28px rgba(39, 65, 89, 0.05);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.vacancyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(39, 65, 89, 0.11);
+}
+
+.vacancyCategory {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #8a949e;
+  margin-bottom: 24px;
+}
+
+/* Цветная точка через CSS */
+.categoryDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.vacancyTitle {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #1e252b;
+  margin-bottom: 22px;
+}
+
+.vacancyLocation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #8a949e;
+}
+
+.vacancyLocationIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.vacancyFooter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.vacancyCompanyLogo {
+  height: 14px;
+  width: auto;
+  max-width: 72px;
+  object-fit: contain;
+}
+
+.vacancyMeta {
+  font-size: 13px;
+  color: #8a949e;
+}
+
+.vacanciesAction {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.btnAllVacancies {
+  background-color: #274159;
+  color: #ffffff;
+  border: none;
+  padding: 16px 48px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnAllVacancies:hover {
+  background-color: #1d3246;
+}
+/* Подвал сайта (Footer) */
+.footer {
+  background-color: #52606d;
+  color: #ffffff;
+  padding: 56px 0 48px;
+}
+
+.footerTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+.citiesList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cityLink {
+  text-decoration: none;
+  font-size: 14px;
+  color: #cbd2d9;
+  transition: color 0.2s;
+}
+
+.cityLink:hover {
+  color: #ffffff;
+}
+
+.footerDivider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.14);
+  margin: 40px 0 36px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.footerLogo img {
+  height: 24px;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+
+.footerLogo:hover img {
+  opacity: 0.9;
+}
+
+.socialsList {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
+}
+
+.socialLink:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
