@@ -15,9 +15,10 @@ body {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1240px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 100px;
 }
 
 /* Верхний голубой блок */
@@ -184,7 +185,7 @@ body {
 /* Блок партнеров */
 .partnersSection {
   background-color: #ffffff;
-  padding: 44px 0;
+  padding: 36px 0;
 }
 
 .partnersInner {
@@ -203,7 +204,7 @@ body {
 .partnersLogos {
   display: flex;
   align-items: center;
-  gap: 54px;
+  gap: 44px;
   flex-wrap: wrap;
 }
 
@@ -216,4 +217,78 @@ body {
 
 .partnerLogo:hover {
   opacity: 1;
+}
+
+/* Секция: Работа по категориям */
+.categoriesSection {
+  background-color: #e2f1ff;
+  padding: 90px 0 110px;
+}
+
+.categoriesContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.categoriesTitle {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #1e252b;
+  margin-bottom: 52px;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 28px;
+}
+
+.categoryCard {
+  width: 100%;
+  aspect-ratio: 246 / 190;
+  min-height: 165px;
+  background-color: #ffffff;
+  padding: clamp(20px, 2vw, 36px) clamp(18px, 1.6vw, 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(39, 65, 89, 0.04);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.categoryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(39, 65, 89, 0.1);
+}
+
+.categoryCardMore {
+  background-color: transparent;
+  border: 1px solid #96a7b8;
+  box-shadow: none;
+}
+
+.categoryCardMore:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+}
+
+.categoryIcon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.categoryName {
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #2c353d;
+  white-space: pre-line;
 }
